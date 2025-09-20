@@ -1,0 +1,12 @@
+<div class="card">
+  <h2>Pet dog</h2>
+  <div class="emoji">🐶</div>
+
+  <div class="progress">
+    <div class="bar" [style.width.%]="progress"></div>
+  </div>
+
+  <p>Treats earned: {{ treats }}</p>
+
+  <button (click)="trainPet()">Train!</button>
+</div>
