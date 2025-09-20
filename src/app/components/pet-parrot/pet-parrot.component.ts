@@ -12,7 +12,6 @@ export class PetParrotComponent implements OnInit {
   progress = 0;
   completed = false;
   treats = 0;
-  message = ''
 
 
   action: 'idle' | 'flap' | 'spin' | 'celebrate' = 'idle';
@@ -43,7 +42,6 @@ export class PetParrotComponent implements OnInit {
       this.completed = true;
       this.onComplete();
     }
-    this.message = `🦜 Parrot performed ${this.action}! Progress +${effort}%. Overall progress: ${this.progress}%`
   }
 
   resetAction() {
@@ -55,6 +53,6 @@ export class PetParrotComponent implements OnInit {
     this.action = 'celebrate'; // trigger celebration animation
     setTimeout(() => {
        alert('🦜 Training complete! Your parrot learned to flap & spin!');
-    }, 3000);
+    }, 2500);
   }
 }
