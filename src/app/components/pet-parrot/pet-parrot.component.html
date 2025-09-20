@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="parrot-container">
+    <h2>Pet parrot</h2>
+    <div class="parrot" [ngClass]="action" (animationend)="resetAction()">
+      🦜
+    </div>
+  </div>
+
+  <div class="progress">
+    <div class="bar" [style.width.%]="progress"></div>
+  </div>
+
+  <p>Treats earned: {{ treats }}</p>
+  <p>{{ message }}</p>
+  <button (click)="trainPet()">Train!</button>
+</div>
