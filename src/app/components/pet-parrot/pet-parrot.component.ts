@@ -53,6 +53,6 @@ export class PetParrotComponent implements OnInit {
     this.action = 'celebrate'; // trigger celebration animation
     setTimeout(() => {
       alert('🦜 Training complete! Your parrot learned to flap & spin!');
-    }, 2500);
+    }, 3000);
   }
 }
