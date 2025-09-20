@@ -12,7 +12,7 @@ import { PetParrotComponent } from './components/pet-parrot/pet-parrot.component
     PetParrotComponent
   ],
   templateUrl: './app.html',
-  styleUrl: './app.sass'
+  styleUrl: './app.scss'
 })
 export class App {
   protected title = 'ngx-abstract-and-projection';

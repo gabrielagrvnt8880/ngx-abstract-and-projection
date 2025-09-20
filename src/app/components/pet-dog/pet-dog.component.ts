@@ -12,7 +12,6 @@ export class PetDogComponent implements OnInit {
   progress = 0;
   completed = false;
   treats = 0;
-  message = ''
 
 
   action: 'idle' | 'jump' | 'roll' | 'celebrate' = 'idle';
@@ -37,13 +36,12 @@ export class PetDogComponent implements OnInit {
     const effort = Math.floor(Math.random() * 21) + 10;
     this.progress += effort;
     this.treats++;
-    
+
     if (this.progress >= 100) {
       this.progress = 100;
       this.completed = true;
       this.onComplete();
     }
-    this.message = `🐶 Dog performed ${this.action}! Progress +${effort}%. Overall progress: ${this.progress}%`
   }
 
   resetAction() {
