@@ -40,6 +40,13 @@
     &:hover {
       background: #45a049;
     }
+    &:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    &:active {
+      background: #2e6b31;
+    }
   }
 }
 
@@ -69,25 +76,55 @@
 }
 
 @keyframes scratch {
-  0%   { transform: translateX(0) rotate(0); }
-  25%  { transform: translateX(-15px) rotate(-10deg); }
-  50%  { transform: translateX(15px) rotate(10deg); }
-  75%  { transform: translateX(-10px) rotate(-5deg); }
-  100% { transform: translateX(0) rotate(0); }
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  25% {
+    transform: translateX(-15px) rotate(-10deg);
+  }
+  50% {
+    transform: translateX(15px) rotate(10deg);
+  }
+  75% {
+    transform: translateX(-10px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
 }
 
 @keyframes pounce {
-  0%   { transform: scale(1) translateY(0); }
-  30%  { transform: scale(1.1) translateY(-20px); }
-  60%  { transform: scale(1.2) translateY(-40px); }
-  100% { transform: scale(1) translateY(0); }
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  30% {
+    transform: scale(1.1) translateY(-20px);
+  }
+  60% {
+    transform: scale(1.2) translateY(-40px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
 }
 
 @keyframes shake {
-  0%   { transform: rotate(0deg); }
-  20%  { transform: rotate(15deg); }
-  40%  { transform: rotate(-15deg); }
-  60%  { transform: rotate(10deg); }
-  80%  { transform: rotate(-10deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

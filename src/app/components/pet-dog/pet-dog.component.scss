@@ -40,6 +40,13 @@
     &:hover {
       background: #45a049;
     }
+    &:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    &:active {
+      background: #2e6b31;
+    }
   }
 }
 

@@ -8,6 +8,7 @@
     <div class="bar" [style.width.%]="progress"></div>
   </div>
 
+  <p>{{ action }}</p>
   <p>Treats earned: {{ treats }}</p>
-  <button (click)="trainPet()">Train!</button>
+  <button [disabled]="disableButton" (click)="trainPet()">Train!</button>
 </div>
