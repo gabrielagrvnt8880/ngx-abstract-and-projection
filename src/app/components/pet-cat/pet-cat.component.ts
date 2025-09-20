@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { PetTrainingDirective } from '../../directives/pet-training/pet-training.directive';
+import { PetTemplateComponent } from '../pet-template/pet-template.component';
 
 @Component({
   selector: 'pet-cat',
   templateUrl: './pet-cat.component.html',
   styleUrls: ['./pet-cat.component.scss'],
-  imports: [CommonModule],
+  imports: [CommonModule, PetTemplateComponent],
+  encapsulation: ViewEncapsulation.None
 })
 export class PetCatComponent extends PetTrainingDirective {
   override minEffort: number = 5;

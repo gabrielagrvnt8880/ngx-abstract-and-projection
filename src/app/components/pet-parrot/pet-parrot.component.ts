@@ -1,13 +1,15 @@
 import { CommonModule } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, ViewEncapsulation } from "@angular/core";
 import { PetTrainingDirective } from "../../directives/pet-training/pet-training.directive";
+import { PetTemplateComponent } from "../pet-template/pet-template.component";
 
 
 @Component({
   selector: 'pet-parrot',
   templateUrl: './pet-parrot.component.html',
   styleUrls: ['./pet-parrot.component.scss'],
-  imports: [CommonModule]
+  imports: [CommonModule, PetTemplateComponent],
+  encapsulation: ViewEncapsulation.None
 })
 export class PetParrotComponent extends PetTrainingDirective {
   override action: 'idle' | 'flap' | 'spin' | 'celebrate' = 'idle';

@@ -1,0 +1,18 @@
+<div class="card">
+  <h2>{{ petName }}</h2>
+  <div [class]="petClass + '-container'">
+    <div [class]="petClass" [ngClass]="pet.action" (animationend)="pet.resetAction()">
+      {{ petEmoji }}
+    </div>
+  </div>
+
+  <div class="progress">
+    <div class="bar" [style.width.%]="pet.progress"></div>
+  </div>
+
+  <p>{{ pet.getAction(pet.action) }}</p>
+  <p>Treats earned: {{ pet.treats }}</p>
+  <button [disabled]="pet.disableButton" (click)="pet.trainPet()">
+    Train!
+  </button>
+</div>

@@ -1,15 +1,2 @@
-<div class="card">
-  <h2>Parrot</h2>
-  <div class="parrot-container">
-    <div class="parrot" [ngClass]="action" (animationend)="resetAction()">
-      🦜
-    </div>
-  </div>
-
-  <div class="progress">
-    <div class="bar" [style.width.%]="progress"></div>
-  </div>
-  <p>{{ getAction(action) }}</p>
-  <p>Treats earned: {{ treats }}</p>
-  <button [disabled]="disableButton" (click)="trainPet()">Train!</button>
-</div>
+<pet-template [pet]="this" petName="Parrot" petClass="parrot" petEmoji="🦜">
+</pet-template>
