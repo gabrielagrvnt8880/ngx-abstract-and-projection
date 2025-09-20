@@ -19,6 +19,17 @@ export class PetCatComponent extends PetTrainingDirective {
     return Math.random() > 0.5 ? 'scratch' : 'pounce';
   }
 
+  override getAction(action: string): string {
+    const actions: Record<string, string> = {
+      'idle': 'sleeping',
+      'scratch': 'scratching',
+      'pounce': 'pouncing',
+      'ignore': 'ignoring you',
+      'celebrate': 'celebrating'
+    }
+    return actions[action];
+  }
+
   override getCelebrateMessage(): string {
     return '🐱 Training complete! Your cat learned to scratch & pounce!';
   }

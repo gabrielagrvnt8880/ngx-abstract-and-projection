@@ -13,6 +13,16 @@ export class PetParrotComponent extends PetTrainingDirective {
   override action: 'idle' | 'flap' | 'spin' | 'celebrate' = 'idle';
   override minEffort: number = 15;
 
+  override getAction(action: string): string {
+    const actions: Record<string, string> = {
+      'idle': 'perching',
+      'flap': 'flapping wings',
+      'spin': 'spinning around',
+      'celebrate': 'celebrating'
+    }
+    return actions[action];
+  }
+
   override getRandomAction(): string {
     return Math.random() > 0.5 ? 'flap' : 'spin';
   }

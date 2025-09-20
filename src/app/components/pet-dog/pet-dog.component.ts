@@ -16,6 +16,16 @@ export class PetDogComponent extends PetTrainingDirective {
     return Math.random() > 0.5 ? 'jump' : 'roll';
   }
 
+  override getAction(action: string): string {
+    const actions: Record<string, string> = {
+      'idle': 'resting',
+      'jump': 'jumping',
+      'roll': 'rolling over',
+      'celebrate': 'celebrating'
+    }
+    return actions[action];
+  }
+
   override getCelebrateMessage(): string {
     return '🐶 Training complete! Your dog learned to jump & roll!';
   }

@@ -7,7 +7,7 @@
   <div class="progress">
     <div class="bar" [style.width.%]="progress"></div>
   </div>
-  <p>{{ action }}</p>
+  <p>{{ getAction(action) }}</p>
   <p>Treats earned: {{ treats }}</p>
   <button [disabled]="disableButton" (click)="trainPet()">Train!</button>
 </div>

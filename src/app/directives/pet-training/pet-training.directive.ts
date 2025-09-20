@@ -11,6 +11,8 @@ export abstract class PetTrainingDirective implements OnInit {
 
   action: string = 'idle';
 
+  abstract getAction(action: string): string;
+
   ngOnInit(): void {
     this.startTraining();
   }
@@ -59,7 +61,7 @@ export abstract class PetTrainingDirective implements OnInit {
     this.action = 'celebrate'; // trigger celebration animation
     setTimeout(() => {
       alert(this.getCelebrateMessage());
-    }, 3000);
+    }, 2500);
   }
 
 
