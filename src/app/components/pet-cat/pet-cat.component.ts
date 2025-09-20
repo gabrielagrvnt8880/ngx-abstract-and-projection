@@ -13,7 +13,6 @@ export class PetCatComponent implements OnInit {
   progress = 0;
   completed = false;
   treats = 0;
-  message = ''
 
 
   action: 'idle' | 'scratch' | 'pounce' | 'celebrate' = 'idle';
@@ -44,7 +43,6 @@ export class PetCatComponent implements OnInit {
       this.completed = true;
       this.onComplete();
     }
-    this.message = `🐱 Cat performed ${this.action}! Progress +${effort}%. Overall progress: ${this.progress}%`
   }
 
   resetAction() {
