@@ -8,7 +8,7 @@ import { PetDogComponent } from './components/pet-dog/pet-dog.component';
     PetDogComponent
   ],
   templateUrl: './app.html',
-  styleUrl: './app.sass'
+  styleUrl: './app.scss'
 })
 export class App {
   protected title = 'ngx-abstract-and-projection';
