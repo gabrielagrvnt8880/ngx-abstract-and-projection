@@ -33,7 +33,7 @@ button {
   }
 }
 
-.dog-container {
+.cat-container {
   margin-top: 1rem;
   height: 100px;
   display: flex;
@@ -41,47 +41,36 @@ button {
   align-items: flex-end;
 }
 
-.dog {
+.cat {
   font-size: 4rem;
   display: inline-block;
 
-  &.jump {
-    animation: jump 0.8s ease-in-out;
+  &.scratch {
+    animation: scratch 0.6s ease-in-out;
   }
 
-  &.roll {
-    animation: roll 1s ease-in-out;
+  &.pounce {
+    animation: pounce 0.8s ease-in-out;
   }
+
   &.celebrate {
-    animation: shake 0.6s ease-in-out 3; // repeat 3 times
+    animation: shake 0.6s ease-in-out 3;
   }
 }
 
-@keyframes jump {
-  0% {
-    transform: translateY(0);
-  }
-  30% {
-    transform: translateY(-60px);
-  }
-  60% {
-    transform: translateY(-60px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+@keyframes scratch {
+  0%   { transform: translateX(0) rotate(0); }
+  25%  { transform: translateX(-15px) rotate(-10deg); }
+  50%  { transform: translateX(15px) rotate(10deg); }
+  75%  { transform: translateX(-10px) rotate(-5deg); }
+  100% { transform: translateX(0) rotate(0); }
 }
 
-@keyframes roll {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes pounce {
+  0%   { transform: scale(1) translateY(0); }
+  30%  { transform: scale(1.1) translateY(-20px); }
+  60%  { transform: scale(1.2) translateY(-40px); }
+  100% { transform: scale(1) translateY(0); }
 }
 
 @keyframes shake {
