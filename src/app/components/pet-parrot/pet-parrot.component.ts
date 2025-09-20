@@ -30,7 +30,7 @@ export class PetParrotComponent implements OnInit {
     if (this.completed) return;
 
     // Randomize jump or roll
-  this.action = Math.random() > 0.5 ? 'flap' : 'spin';
+    this.action = Math.random() > 0.5 ? 'flap' : 'spin';
 
     // randomize effort between 10 and 30
     const effort = Math.floor(Math.random() * 21) + 10;
@@ -52,7 +52,7 @@ export class PetParrotComponent implements OnInit {
   onComplete() {
     this.action = 'celebrate'; // trigger celebration animation
     setTimeout(() => {
-       alert('🦜 Training complete! Your parrot learned to flap & spin!');
+      alert('🦜 Training complete! Your parrot learned to flap & spin!');
     }, 2500);
   }
 }
