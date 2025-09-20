@@ -1,12 +1,14 @@
 <div class="card">
-  <h2>Pet dog</h2>
-  <div class="emoji">🐶</div>
+  <div class="dog-container">
+    <h2>Pet dog</h2>
+    <div class="dog" [ngClass]="action" (animationend)="resetAction()">🐶</div>
+  </div>
 
   <div class="progress">
     <div class="bar" [style.width.%]="progress"></div>
   </div>
 
   <p>Treats earned: {{ treats }}</p>
-
+  <p>{{message}}</p>
   <button (click)="trainPet()">Train!</button>
 </div>
