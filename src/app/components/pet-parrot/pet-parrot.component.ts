@@ -11,7 +11,7 @@ import { PetTrainingDirective } from "../../directives/pet-training/pet-training
 })
 export class PetParrotComponent extends PetTrainingDirective {
   override action: 'idle' | 'flap' | 'spin' | 'celebrate' = 'idle';
-  override minEffort: number = 15;
+  override maxEffort: number = 15;
 
   override getRandomAction(): string {
     return Math.random() > 0.5 ? 'flap' : 'spin';
