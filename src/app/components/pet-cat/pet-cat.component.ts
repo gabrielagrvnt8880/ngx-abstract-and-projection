@@ -10,7 +10,7 @@ import { PetTrainingDirective } from '../../directives/pet-training/pet-training
 })
 export class PetCatComponent extends PetTrainingDirective {
   override minEffort: number = 5;
-  override maxEffort: number = 25;
+  override maxEffort: number = 25; 
 
   override action: 'idle' | 'scratch' | 'pounce' | 'celebrate' | 'ignore' =
     'idle';
