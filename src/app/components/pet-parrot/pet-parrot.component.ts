@@ -13,7 +13,7 @@ import { PetTemplateComponent } from "../pet-template/pet-template.component";
 })
 export class PetParrotComponent extends PetTrainingDirective {
   override action: 'idle' | 'flap' | 'spin' | 'celebrate' = 'idle';
-  override minEffort: number = 15;
+  override maxEffort: number = 15;
 
   override getAction(action: string): string {
     const actions: Record<string, string> = {
