@@ -23,6 +23,12 @@
   }
 }
 
+.notes {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+
 @keyframes flap {
   0% {
     transform: rotate(0);

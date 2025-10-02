@@ -1,73 +1,88 @@
+.dog-container {
+  margin-top: 1rem;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 
-  .dog-container {
-    margin-top: 1rem;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+.dog {
+  font-size: 4rem;
+  display: inline-block;
+
+  &.jump {
+    animation: jump 0.8s ease-in-out;
   }
 
-  .dog {
-    font-size: 4rem;
-    display: inline-block;
+  &.roll {
+    animation: roll 1s ease-in-out;
+  }
+  &.celebrate {
+    animation: shake 0.6s ease-in-out 3; // repeat 3 times
+  }
+}
+.extra-actions {
+  margin-top: 1rem;
 
-    &.jump {
-      animation: jump 0.8s ease-in-out;
-    }
+  button {
+    margin: 0 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #0077ff;
+    color: white;
+    transition: 0.2s;
 
-    &.roll {
-      animation: roll 1s ease-in-out;
-    }
-    &.celebrate {
-      animation: shake 0.6s ease-in-out 3; // repeat 3 times
+    &:hover {
+      background: #005fcc;
     }
   }
-
-  @keyframes jump {
-    0% {
-      transform: translateY(0);
-    }
-    30% {
-      transform: translateY(-60px);
-    }
-    60% {
-      transform: translateY(-60px);
-    }
-    100% {
-      transform: translateY(0);
-    }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
   }
-
-  @keyframes roll {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  30% {
+    transform: translateY(-60px);
   }
-
-  @keyframes shake {
-    0% {
-      transform: rotate(0deg);
-    }
-    20% {
-      transform: rotate(15deg);
-    }
-    40% {
-      transform: rotate(-15deg);
-    }
-    60% {
-      transform: rotate(10deg);
-    }
-    80% {
-      transform: rotate(-10deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
+  60% {
+    transform: translateY(-60px);
   }
+  100% {
+    transform: translateY(0);
+  }
+}
 
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

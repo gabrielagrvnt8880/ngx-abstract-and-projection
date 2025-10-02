@@ -8,6 +8,7 @@ export abstract class PetTrainingDirective implements OnInit {
   minEffort = 10;
   maxEffort = 30;
   disableButton = false;
+  protected currentEffort = 0;
 
   action: string = 'idle';
 
@@ -32,24 +33,31 @@ export abstract class PetTrainingDirective implements OnInit {
   trainPet() {
     if (this.completed) return;
     this.disableButton = true;
-
+    this.currentEffort = this.getRandomEffort();
     this.action = this.getRandomAction();
-
-    const effort = this.getRandomEffort();
-    this.progress += effort;
-    this.treats++;
-
-    if (this.progress >= 100) {
-      this.progress = 100;
-      this.completed = true;
-      this.disableButton = true;
-      this.onComplete();
-    }
   }
 
   resetAction() {
     this.action = 'idle';
     this.disableButton = this.completed;
+    this.checkCompletion(); 
+  }
+
+  checkCompletion() {
+    if (this.completed) return;
+    if (this.currentEffort === 0) return;
+
+    const _progress = this.progress + this.currentEffort > 100 ? 100 - this.progress : this.currentEffort;
+    this.progress += _progress;
+    this.treats++;
+    this.action = 'idle';
+    this.currentEffort = 0;
+    this.disableButton = this.completed;
+    if (this.progress >= 100) {
+      this.completed = true;
+      this.disableButton = true;
+      this.onComplete();
+    }
   }
 
   public getCelebrateMessage(): string {

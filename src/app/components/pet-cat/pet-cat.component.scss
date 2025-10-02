@@ -21,6 +21,21 @@
   &.celebrate {
     animation: shake 0.6s ease-in-out 3;
   }
+  &.ignore {
+    animation: ignoring 6s ease-in-out;
+  }
+}
+
+.badges {
+  margin-top: 0.5rem;
+  span {
+    display: inline-block;
+    margin: 0 0.3rem;
+    padding: 0.2rem 0.5rem;
+    background: #ffeaa7;
+    border-radius: 6px;
+    font-size: 0.85rem;
+  }
 }
 
 @keyframes scratch {
@@ -74,5 +89,18 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes ignoring {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

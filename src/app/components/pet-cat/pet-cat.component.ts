@@ -26,7 +26,7 @@ export class PetCatComponent extends PetTrainingDirective {
       'idle': 'sleeping',
       'scratch': 'scratching',
       'pounce': 'pouncing',
-      'ignore': 'ignoring you',
+      'ignore': 'yawning',
       'celebrate': 'celebrating'
     }
     return actions[action];
@@ -36,28 +36,20 @@ export class PetCatComponent extends PetTrainingDirective {
     return '🐱 Training complete! Your cat learned to scratch & pounce!';
   }
 
-  override trainPet(): void {
+  override trainPet() {
     if (this.completed) return;
     this.disableButton = true;
 
     const mood = Math.random();
     const effort = mood > 0.33 ? this.getRandomEffort() : 0;
-
-    this.progress += effort;
+    this.currentEffort = effort;
 
     if (effort > 0) {
       this.action = this.getRandomAction();
-      this.treats++;
     } else {
       this.action = 'ignore';
-      this.disableButton = false;
-    }
-
-    if (this.progress >= 100) {
-      this.progress = 100;
-      this.completed = true;
-      this.disableButton = true;
-      this.onComplete();
     }
   }
+
+
 }

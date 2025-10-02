@@ -32,4 +32,9 @@ export class PetDogComponent extends PetTrainingDirective {
     return '🐶 Training complete! Your dog learned to jump & roll!';
   }
 
+  public petDog(): void {
+    this.action = 'celebrate';
+    this.currentEffort = 0;
+  }
+
 }

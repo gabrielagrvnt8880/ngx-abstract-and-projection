@@ -1,5 +1,5 @@
 import { CommonModule } from "@angular/common";
-import { Component, Input } from "@angular/core";
+import { Component, Input, ViewEncapsulation } from "@angular/core";
 import { PetTrainingDirective } from "../../directives/pet-training/pet-training.directive";
 
 @Component({
@@ -7,6 +7,7 @@ import { PetTrainingDirective } from "../../directives/pet-training/pet-training
   templateUrl: './pet-template.component.html',
   styleUrls: ['./pet-template.component.scss'],
   imports: [CommonModule],
+  encapsulation: ViewEncapsulation.None,
 
 })
 export class PetTemplateComponent {
